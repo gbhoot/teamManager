@@ -1,0 +1,63 @@
+<div class="container p-4 border">
+    <h5>Add Player</h5>
+
+    <div class="container">        
+        <form (submit)="addNewPlayer($event)">
+            <div class="row form-group">
+                <div class="col-md-3">
+                    <h6>First Name:</h6>
+                </div>
+                <div class="col">
+                    <input type="text" class="form-control"
+                    name="playerD.fName"
+                    [(ngModel)]="playerD.fName">
+                </div>
+            </div>
+            <div class="row form-group">
+                <div class="col-md-3">
+                    <h6>Last Name:</h6>
+                </div>
+                <div class="col">
+                    <input type="text" class="form-control"
+                    name="playerD.lName"
+                    [(ngModel)]="playerD.lName">
+                </div>
+            </div>
+            <div class="row form-group">
+                <div class="col-md-3">
+                    <h6>Position</h6>
+                </div>
+                <div class="col">
+                    <select name="playerD.position" 
+                    class="form-control"
+                    [(ngModel)]="playerD.position">
+                        <option default>Goalkeeper</option>
+                        <option>Defender</option>
+                        <option>Midfielder</option>
+                        <option>Forward</option>
+                    </select>
+                </div>
+            </div>
+            <div class="row form-group">
+                <div class="col-md-3">
+                    <h6>Role</h6>
+                </div>
+                <div class="col">
+                    <input type="text" class="form-control"
+                    name="playerD.role" [(ngModel)]="playerD.role">
+                </div>
+            </div>
+            <div class="row form-group">
+                <div class="col"></div>
+                <div class="col-md-3 mx-1">
+                    <a [routerLink]="['/players', 'list']"
+                    class="btn btn-secondary">Cancel</a>
+                </div>
+                <div class="col-md-3 mx-1">
+                    <button class="btn btn-success"
+                    type="submit">Add Player</button>
+                </div>
+            </div>
+        </form>
+    </div>
+</div>

@@ -12,11 +12,12 @@ var express = require('express'),
 var app = express();
 app.use(bodyParser.urlencoded({extended: true}));
 app.use(bodyParser.json());
+app.use(express.static(path.join(__dirname, './public/dist/public')));
 
 // Routes
 require('./server/config/routes.js')(app);
 
-app.listen(8000);
+app.listen(9000);
 
 // Sockets
 // require('./server/config/socket.js')(server);

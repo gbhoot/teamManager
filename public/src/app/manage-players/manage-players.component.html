@@ -1,0 +1,12 @@
+<div class="container p-4 border bg-dark">
+    <div class="row">
+        <a [routerLink]="['list']" style="text-decoration:none"
+        class="mx-3"
+        ><h5 class="mb-0">List</h5></a>
+        <a><h3 class="text-light mb-0">  |  </h3></a>
+        <a [routerLink]="['addPlayer']" style="text-decoration:none"
+        class="mx-3 align-items-center"
+        ><h5 class="mb-0 text-warning">Add Player</h5></a>
+    </div>
+    <router-outlet></router-outlet>
+</div>

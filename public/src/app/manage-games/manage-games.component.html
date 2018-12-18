@@ -1,0 +1,28 @@
+<div class="container p-4 border bg-dark">
+    <div class="row">
+        <div class="col text-light">
+            <h4>Player Status - Game {{ gameNo }}</h4>
+        </div>
+    </div>
+
+    <div class="row my-3">
+        <div class="col"></div>
+        <div class="col-md-2">
+            <a [routerLink]="['game', '1']"
+            class="btn btn-primary"
+            ><h6>Game 1</h6></a>
+        </div>
+        <div class="col-md-2">
+            <a [routerLink]="['game', '2']"
+            class="btn btn-primary"
+            ><h6>Game 2</h6></a>
+        </div>
+        <div class="col-md-2">
+            <a [routerLink]="['game', '3']"
+            class="btn btn-primary"
+            ><h6>Game 3</h6></a>
+        </div>
+        <div class="col"></div>
+    </div>
+    <router-outlet></router-outlet>
+</div>

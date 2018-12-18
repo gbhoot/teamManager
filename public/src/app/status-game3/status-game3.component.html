@@ -1,0 +1,43 @@
+<div class="container">
+    <table class="table table-striped">
+        <thead class="thead-dark">
+            <tr class="text-center">
+                <th>No</th>
+                <th>Player Name</th>
+                <th>Current Game Status</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr *ngFor="let player of players, let i=index"
+            class="text-center">
+                <th scope="row">{{ i+1 }}</th>
+                <td>{{ player.fullName }}</td>
+                <td>
+                    <div class="row">
+                        <div class="col text-center">
+                            <button *ngIf="player.statusGame3==1" class="btn btn-success"
+                            (click)="statusBtnPressed(player._id, 1)"
+                            >Playing</button>
+                            <button *ngIf="player.statusGame3!=1" class="btn btn-secondary"
+                            (click)="statusBtnPressed(player._id, 1)"
+                            >Playing</button>
+                        </div>
+                        <div class="col text-center">
+                            <button class="btn btn-secondary"
+                            (click)="statusBtnPressed(player._id, 2)"
+                            >Playing</button>
+                        </div>
+                        <div class="col text-center">
+                            <button *ngIf="player.statusGame3==0" class="btn btn-warning"
+                            (click)="statusBtnPressed(player._id, 0)"
+                            >Undecided</button>
+                            <button *ngIf="player.statusGame3!=0" class="btn btn-secondary"
+                            (click)="statusBtnPressed(player._id, 0)"
+                            >Undecided</button>
+                        </div>
+                    </div>
+                </td>
+            </tr>
+        </tbody>
+    </table>
+</div>
